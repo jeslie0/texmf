@@ -1,0 +1,4 @@
+#+title: ReadMe
+[[https://img.shields.io/badge/License-MIT-yellow.svg]]
+* What is this?
+This is my texmf folder, published as a nix flake. This allows for reproducible tex documents and also means I don't need to keep track of different macro and =sty= files: =nix= and =git= take care of them for me! I have too many old documents that no longer build due to external dependencies changing, so this is a way to solve that issue.

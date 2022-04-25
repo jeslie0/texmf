@@ -1,0 +1,47 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{math-packages}[2020/11/20]
+
+\RequirePackage[bitstream-charter]{mathdesign}
+\RequirePackage[T1]{fontenc}
+
+% Packages----------------------------------------------------
+% ---Mathematics----------------------
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+% \RequirePackage{amssymb}
+\RequirePackage{bbm}
+\RequirePackage{ebproof}
+\RequirePackage{mathrsfs}
+\RequirePackage{mathtools}
+\RequirePackage{physics}
+\RequirePackage{stmaryrd}
+\RequirePackage{tikz-cd}
+
+% ---other----------------------------
+% \RequirePackage{todonotes}
+\RequirePackage{url}
+\RequirePackage{float}
+\RequirePackage{graphicx}
+\RequirePackage{makeidx}
+\RequirePackage{xcolor}
+\RequirePackage{scalerel}
+
+% patch--------
+\RequirePackage[bitstream-charter]{mathdesign}
+\let\circledS\undefined % here - PS
+\RequirePackage{amssymb}
+
+% ---Hypereferenceing---------------------
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=green,
+  filecolor=green,
+  linkcolor=black,
+  urlcolor=blue
+}
+
+% textboxes-------------------------------------
+\RequirePackage{tcolorbox}
+\tcbset{colback=blue!5!white,colframe=blue!75!black}

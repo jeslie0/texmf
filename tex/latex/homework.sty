@@ -1,0 +1,155 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{notes}[2020/01/22]
+%Setup-------------------------------------------------------
+\makeindex
+
+\RequirePackage[bitstream-charter]{mathdesign}
+\RequirePackage[T1]{fontenc}
+
+%Packages----------------------------------------------------
+%---Mathematics----------------------
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+%\RequirePackage{amssymb}
+\RequirePackage{bbm}
+\RequirePackage{mathrsfs}
+\RequirePackage{mathtools}
+\RequirePackage{physics}
+\RequirePackage{tikz-cd}
+
+%---other----------------------------
+\RequirePackage{todonotes}
+\RequirePackage{url}
+\RequirePackage{float}
+\RequirePackage{graphicx}
+\RequirePackage{makeidx}
+\RequirePackage{xcolor}
+\RequirePackage{scalerel}
+
+% patch--------
+\RequirePackage[bitstream-charter]{mathdesign}
+\let\circledS\undefined % here - PS
+\RequirePackage{amssymb}
+
+%---Hypereferenceing---------------------
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=green,
+    filecolor=green,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+%---Structure-------------------------
+\RequirePackage{geometry}
+\geometry{a4paper, left = 10mm, right = 10mm, top = 10mm}
+
+%\RequirePackage{fancyhdr}
+%\pagestyle{fancy}% Change page style to fancy
+%\fancyhf{}% Clear header/footer
+%\fancyhead[R]{\rightmark}
+%\fancyfoot[C]{\thepage}
+%\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+%\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+%textboxes-------------------------------------
+\RequirePackage{tcolorbox}
+\tcbset{colback=blue!5!white,colframe=blue!75!black}
+
+
+%Macros----------------------------------------
+
+%Sets---------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+
+
+%Categories---------------------------------------
+\newcommand{\A}{\mathscr{A}}
+\newcommand{\smallA}{\mathbb{A}}
+\newcommand{\B}{\mathscr{B}}
+%\newcommand{\C}{\mathscr{C}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+\newcommand{\smallE}{\mathbb{E}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\M}{\mathcal{M}}
+\renewcommand{\O}{\mathscr{O}}
+
+\newcommand{\CAT}{\mathbf{CAT}}
+\newcommand{\Cat}{\mathbf{Cat}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Gpd}{\mathbf{Gpd}}
+\newcommand{\FinSet}{\mathbf{FinSet}}
+\newcommand{\Pos}{\mathbf{Pos}}
+\newcommand{\Ring}{\mathbf{Ring}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\sSet}{\mathbf{sSet}}
+\newcommand{\Vect}{\mathbf{Vect}}
+
+\newcommand{\Deltaaug}{\Delta_\text{aug}}
+
+%Relations-------------------------------------------
+\newcommand{\adjoint}{\dashv}
+\newcommand{\iso}{\cong}
+
+%Functions-------------------------------------------
+\newcommand{\colim}[2]{\text{colim}_{#1}(#2)}
+\renewcommand{\lim}[2]{\text{lim}_{#1}(#2)}
+\newcommand{\dom}{\text{dom}}
+\newcommand{\cod}{\text{cod}}
+\newcommand{\Ho}{\text{Ho}}
+\newcommand{\pp}{\hat{\otimes}}
+
+%Other symbols---------------------------------------
+\renewcommand{\op}{{op}}
+
+%Counters--------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+%Indexing--------------------------------------------
+\newcommand{\indx}[1]{\index{#1}\textbf{\textcolor{blue}{#1}}}
+
+%Topology----------------------------------------------
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\1}{\mathbbm{1}}
+
+%Contextual categories------------------------------------
+\newcommand{\Ob}{\textbf{Ob}}
+\newcommand{\ft}{\text{ft}}
+\newcommand{\id}{\text{id}}
+\newcommand{\Id}{\text{Id}}
+\newcommand{\Ty}{\text{Ty}}
+\newcommand{\refl}{\text{refl}}
+\newcommand{\U}{\mathcal{U}}
+
+
+%Topos and logic -----------------------------------------
+\newcommand{\True}{\text{True}}
+\newcommand{\False}{\text{False}}
+
+\newcommand{\Sub}{\text{Sub}}
+\newcommand{\ClSub}{\text{ClSub}}
+
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Sh}{\text{Sh}}
+\newcommand{\Monic}{\text{Monic}}
+
+
+%Rings-------------------------------------------------------
+\renewcommand{\char}{\text{char}}
+\newcommand{\F}{\mathbb{F}}
+\renewcommand{\ev}{\text{ev}}
