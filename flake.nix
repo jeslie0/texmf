@@ -11,14 +11,16 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
         {
-          defaultPackage = pkgs.stdenv.mkDerivation {
-            pname = "texmf";
-            version = "0.0.1";
+          defaultPackage = self.packages.${system}.texmf;
+
+          packages.texmf = pkgs.stdenvNoCC.mkDerivation {
+            name = "texmf";
             dontConfigure = true;
             src = ./.;
             installPhase = ''
-                         cp -r tex/ $out
-                         cp -r bibtex/ $out
+                         mkdir $out
+                         cp -r $src/tex/ $out
+                         cp -r $src/bibtex/ $out
                            '';
           };
         }
