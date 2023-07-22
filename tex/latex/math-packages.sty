@@ -1,8 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{math-packages}[2020/11/20]
 
-\RequirePackage[bitstream-charter]{mathdesign}
-\RequirePackage[T1]{fontenc}
+% \RequirePackage[bitstream-charter]{mathdesign}
+% \RequirePackage[T1]{fontenc}
 
 % Packages----------------------------------------------------
 % ---Mathematics----------------------
@@ -44,4 +44,7 @@
 
 % textboxes-------------------------------------
 \RequirePackage{tcolorbox}
-\tcbset{colback=blue!5!white,colframe=blue!75!black}
+\newenvironment{bluebox}{\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]}{\end{tcolorbox}}
+\newenvironment{redbox}{\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]}{\end{tcolorbox}}
+\newenvironment{yellowbox}{\begin{tcolorbox}[colback=yellow!5!white,colframe=red!75!black]}{\end{tcolorbox}}
+\newenvironment{greenbox}{\begin{tcolorbox}[colback=green!5!white,colframe=red!75!black]}{\end{tcolorbox}}
